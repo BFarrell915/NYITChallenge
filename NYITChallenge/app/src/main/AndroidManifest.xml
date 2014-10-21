@@ -17,7 +17,6 @@
             </intent-filter>
         </activity>
         <activity
-<<<<<<< HEAD
             android:name=".feed_page"
             android:label="@string/title_activity_feed_page" >
             <intent-filter>
@@ -29,7 +28,6 @@
         <activity
             android:name=".friends_page"
             android:label="@string/title_activity_friends_page" >
-=======
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >
         </activity>
