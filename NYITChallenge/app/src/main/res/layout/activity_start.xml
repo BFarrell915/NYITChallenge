@@ -11,10 +11,6 @@
     android:id="@+id/"
     android:weightSum="1">
 
-<<<<<<< HEAD
-    <TextView
-        android:text="hello_world"
-=======
     <ImageView
         android:src="@drawable/ic_nyit"
         android:layout_width="fill_parent"
@@ -26,7 +22,6 @@
         android:textSize="20dp"
         android:textColor="@color/blue"
         android:background="@color/white"
->>>>>>> origin/master
         android:layout_width="wrap_content"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
@@ -36,10 +31,6 @@
         android:layout_marginBottom="40dp"
         android:textColorHint="@color/blue"
         android:onClick="getStarted"/>
-
-<<<<<<< HEAD
-</LinearLayout>
-
-=======
+    
 </RelativeLayout>
->>>>>>> origin/master
+
