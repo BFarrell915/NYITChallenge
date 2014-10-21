@@ -17,7 +17,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".feed_page"
+            android:name=".FeedActivity"
             android:label="@string/title_activity_feed_page" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +26,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".friends_page"
+            android:name=".FriendsActivity"
             android:label="@string/title_activity_friends_page" >
             android:name=".LoginActivity"
             android:label="@string/title_activity_login" >

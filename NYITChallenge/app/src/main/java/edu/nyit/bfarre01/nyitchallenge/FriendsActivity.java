@@ -6,19 +6,21 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class feed_page extends Activity {
+public class FriendsActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_feed_page);
+        setContentView(R.layout.activity_friends);
     }
+
+
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.feed_page, menu);
+        getMenuInflater().inflate(R.menu.friends_page, menu);
         return true;
     }
 
