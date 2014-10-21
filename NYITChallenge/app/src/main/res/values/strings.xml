@@ -4,5 +4,7 @@
     <string name="app_name">NYIT Challenge</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_feed_page">feed</string>
+    <string name="title_activity_friends_page">friends</string>
 
 </resources>
