@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,10 +11,35 @@
     android:id="@+id/"
     android:weightSum="1">
 
+<<<<<<< HEAD
     <TextView
         android:text="hello_world"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+=======
+    <ImageView
+        android:src="@drawable/ic_nyit"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="40dp"/>
 
+    <Button
+        android:text="@string/get_started"
+        android:textSize="20dp"
+        android:textColor="@color/blue"
+        android:background="@color/white"
+>>>>>>> origin/master
+        android:layout_width="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:textColorHint="@color/blue"
+        android:onClick="getStarted"/>
+
+<<<<<<< HEAD
 </LinearLayout>
 
+=======
+</RelativeLayout>
+>>>>>>> origin/master
