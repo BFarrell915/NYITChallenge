@@ -85,6 +85,7 @@ public class ChallengeFragment extends Fragment implements AbsListView.OnItemCli
         View view = inflater.inflate(R.layout.tab, container, false);
 
         TextView tabText = (TextView) view.findViewById(R.id.tabtextview);
+        tabText.setText("CHALLENGES");
 
         // Set the adapter
         mListView = (AbsListView) view.findViewById(android.R.id.list);

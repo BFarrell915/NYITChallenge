@@ -85,6 +85,7 @@ public class FeedFragment extends Fragment implements AbsListView.OnItemClickLis
         View view = inflater.inflate(R.layout.tab, container, false);
 
         TextView tabText = (TextView) view.findViewById(R.id.tabtextview);
+        tabText.setText("FEED");
 
         // Set the adapter
         mListView = (AbsListView) view.findViewById(android.R.id.list);
