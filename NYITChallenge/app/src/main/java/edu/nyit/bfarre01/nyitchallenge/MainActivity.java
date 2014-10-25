@@ -25,63 +25,20 @@ public class MainActivity extends Activity {
 
         ActionBar actionBar = getActionBar();
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+        actionBar.setDisplayShowTitleEnabled(false);
 
         feedTab = actionBar.newTab().setText("Feed");
         trendingTab = actionBar.newTab().setText("Trend");
         challengeTab = actionBar.newTab().setText("Chall");
 
-        feedTab.setTabListener(new ActionBar.TabListener() {
-            @Override
-            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                fragmentTransaction.replace(R.id.fragment_container, feedFragment);
-            }
+        feedTab.setTabListener(new tabListener(feedFragment));
+        trendingTab.setTabListener(new tabListener(trendingFragment));
+        challengeTab.setTabListener(new tabListener(challengeFragment));
 
-            @Override
-            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                fragmentTransaction.remove(feedFragment);
-            }
-
-            @Override
-            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                // nothing
-            }
-        });
-
-        trendingTab.setTabListener(new ActionBar.TabListener() {
-            @Override
-            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                fragmentTransaction.replace(R.id.fragment_container, trendingFragment);
-            }
-
-            @Override
-            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                fragmentTransaction.remove(trendingFragment);
-            }
-
-            @Override
-            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                // nothing
-            }
-        });
-
-        challengeTab.setTabListener(new ActionBar.TabListener() {
-            @Override
-            public void onTabSelected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                fragmentTransaction.replace(R.id.fragment_container, challengeFragment);
-            }
-
-            @Override
-            public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                fragmentTransaction.remove(challengeFragment);
-            }
-
-            @Override
-            public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
-                // nothing
-            }
-        });
+        actionBar.addTab(feedTab);
+        actionBar.addTab(trendingTab);
+        actionBar.addTab(challengeTab);
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

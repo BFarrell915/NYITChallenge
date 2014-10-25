@@ -11,5 +11,6 @@
     <string name="title_activity_profile">Profile</string>
     <string name="title_activity_main">Main</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>

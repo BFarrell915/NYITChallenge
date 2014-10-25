@@ -85,7 +85,7 @@ public class TrendingFragment extends Fragment implements AbsListView.OnItemClic
         View view = inflater.inflate(R.layout.tab, container, false);
 
         TextView tabText = (TextView) view.findViewById(R.id.tabtextview);
-        tabText.setText("TRENDING");
+        tabText.setText("TREND");
 
         // Set the adapter
         mListView = (AbsListView) view.findViewById(android.R.id.list);
