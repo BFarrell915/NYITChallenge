@@ -2,13 +2,15 @@ package edu.nyit.bfarre01.nyitchallenge;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.FrameLayout;
 import android.widget.ListAdapter;
 import android.widget.TextView;
 
@@ -25,6 +27,7 @@ import edu.nyit.bfarre01.nyitchallenge.dummy.DummyContent;
  * interface.
  */
 public class TrendingFragment extends Fragment implements AbsListView.OnItemClickListener {
+    public static final String ARG_OBJECT = "object";
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,10 +52,10 @@ public class TrendingFragment extends Fragment implements AbsListView.OnItemClic
     private ListAdapter mAdapter;
 
     // TODO: Rename and change types of parameters
-    public static TrendingFragment newInstance(String param1, String param2) {
+    public static TrendingFragment newInstance(int page, String param2) {
         TrendingFragment fragment = new TrendingFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
+        args.putInt(ARG_PARAM1, page);
         args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
@@ -80,33 +83,16 @@ public class TrendingFragment extends Fragment implements AbsListView.OnItemClic
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.tab, container, false);
-
-        TextView tabText = (TextView) view.findViewById(R.id.tabtextview);
-        tabText.setText("TREND");
-
-        // Set the adapter
-        mListView = (AbsListView) view.findViewById(android.R.id.list);
-        ((AdapterView<ListAdapter>) mListView).setAdapter(mAdapter);
-
-        // Set OnItemClickListener so we can be notified on item clicks
-        mListView.setOnItemClickListener(this);
-
-        return view;
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View rootView = inflater.inflate(
+                R.layout.fragment_trending_list, container, false);
+        Bundle args = getArguments();
+        //((TextView) rootView.findViewById(android.R.id.empty)).setText(
+                //Integer.toString(args.getInt(ARG_OBJECT)));
+        return rootView;
     }
 
-    @Override
-    public void onAttach(Activity activity) {
-        super.onAttach(activity);
-        try {
-            mListener = (OnFragmentInteractionListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                + " must implement OnFragmentInteractionListener");
-        }
-    }
+
 
     @Override
     public void onDetach() {

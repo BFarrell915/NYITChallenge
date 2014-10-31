@@ -2,43 +2,77 @@ package edu.nyit.bfarre01.nyitchallenge;
 
 import android.app.ActionBar;
 import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import edu.nyit.bfarre01.nyitchallenge.R;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
 
-    ActionBar.Tab feedTab, trendingTab, challengeTab;
+    MainPagerAdapter mainPagerAdapter;
+    ViewPager mainViewPager;
 
-    Fragment feedFragment = new FeedFragment();
-    Fragment trendingFragment = new TrendingFragment();
-    Fragment challengeFragment = new ChallengeFragment();
+    //android.app.Fragment feedFragment = new FeedFragment();
+    //android.app.Fragment trendingFragment = new TrendingFragment();
+    //android.app.Fragment challengeFragment = new ChallengeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final ActionBar actionBar = getActionBar();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ActionBar actionBar = getActionBar();
+        // ViewPager and its adapters use support library
+        // fragments, so use getSupportFragmentManager.
+        mainPagerAdapter = new MainPagerAdapter(getSupportFragmentManager());
+        mainViewPager = (ViewPager) findViewById(R.id.pager);
+        mainViewPager.setAdapter(mainPagerAdapter);
+
+        mainViewPager = (ViewPager) findViewById(R.id.pager);
+        mainViewPager.setOnPageChangeListener(
+                new ViewPager.SimpleOnPageChangeListener() {
+                    @Override
+                    public void onPageSelected(int position) {
+                        // When swiping between pages, select the
+                        // corresponding tab.
+                        getActionBar().setSelectedNavigationItem(position);
+                    }
+                });
+
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-        actionBar.setDisplayShowTitleEnabled(false);
 
-        feedTab = actionBar.newTab().setText("Feed");
-        trendingTab = actionBar.newTab().setText("Trend");
-        challengeTab = actionBar.newTab().setText("Chall");
+        ActionBar.TabListener tabListener = new ActionBar.TabListener() {
 
-        feedTab.setTabListener(new tabListener(feedFragment));
-        trendingTab.setTabListener(new tabListener(trendingFragment));
-        challengeTab.setTabListener(new tabListener(challengeFragment));
+            @Override
+            public void onTabSelected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+                mainViewPager.setCurrentItem(tab.getPosition());
+            }
 
-        actionBar.addTab(feedTab);
-        actionBar.addTab(trendingTab);
-        actionBar.addTab(challengeTab);
+            @Override
+            public void onTabUnselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+
+            }
+
+            @Override
+            public void onTabReselected(ActionBar.Tab tab, android.app.FragmentTransaction fragmentTransaction) {
+                // nothing
+            }
+        };
+
+        actionBar.addTab(actionBar.newTab().setText("TRENDING").setTabListener(tabListener));
+        actionBar.addTab(actionBar.newTab().setText("FEED").setTabListener(tabListener));
+        actionBar.addTab(actionBar.newTab().setText("CHALLENGE").setTabListener(tabListener));
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -73,3 +107,4 @@ public class MainActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 }
+

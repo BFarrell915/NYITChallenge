@@ -1,6 +1,6 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="edu.nyit.bfarre01.nyitchallenge.MainActivity" >
+    tools:context="edu.nyit.bfarre01.nyitchallenge.MainActivity2" >
     <item android:id="@+id/action_profile"
         android:title="@string/title_activity_profile"
         android:icon="@drawable/ic_action_person"
