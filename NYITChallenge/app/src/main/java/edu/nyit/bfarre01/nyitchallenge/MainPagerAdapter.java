@@ -1,10 +1,7 @@
 package edu.nyit.bfarre01.nyitchallenge;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentStatePagerAdapter;
 
 public class MainPagerAdapter extends FragmentPagerAdapter {
     public MainPagerAdapter(FragmentManager fm) {
@@ -20,7 +17,7 @@ public class MainPagerAdapter extends FragmentPagerAdapter {
             case 1: // Fragment # 0 - This will show FirstFragment different title
                 return FeedFragment.newInstance(1, "Page # 2");
             case 2: // Fragment # 1 - This will show SecondFragment
-                return ChallengeFragment.newInstance(2, "Page # 3");
+                return ChallengesFragment.newInstance(2, "Page # 3");
             default:
                 return null;
         }

@@ -1,6 +1,5 @@
 package edu.nyit.bfarre01.nyitchallenge;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -24,7 +23,7 @@ import edu.nyit.bfarre01.nyitchallenge.dummy.DummyContent;
  * Activities containing this fragment MUST implement the {@link Callbacks}
  * interface.
  */
-public class ChallengeFragment extends Fragment implements AbsListView.OnItemClickListener {
+public class ChallengesFragment extends Fragment implements AbsListView.OnItemClickListener {
     public static final String ARG_OBJECT = "object";
 
     // TODO: Rename parameter arguments, choose names that match
@@ -50,8 +49,8 @@ public class ChallengeFragment extends Fragment implements AbsListView.OnItemCli
     private ListAdapter mAdapter;
 
     // TODO: Rename and change types of parameters
-    public static ChallengeFragment newInstance(int page, String param2) {
-        ChallengeFragment fragment = new ChallengeFragment();
+    public static ChallengesFragment newInstance(int page, String param2) {
+        ChallengesFragment fragment = new ChallengesFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_PARAM1, page);
         args.putString(ARG_PARAM2, param2);
@@ -63,7 +62,7 @@ public class ChallengeFragment extends Fragment implements AbsListView.OnItemCli
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public ChallengeFragment() {
+    public ChallengesFragment() {
     }
 
     @Override
@@ -83,7 +82,7 @@ public class ChallengeFragment extends Fragment implements AbsListView.OnItemCli
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_challenge_list, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_challenges_list, container, false);
         Bundle args = getArguments();
         //((TextView) rootView.findViewById(android.R.id.empty)).setText(
                 //Integer.toString(args.getInt(ARG_OBJECT)));

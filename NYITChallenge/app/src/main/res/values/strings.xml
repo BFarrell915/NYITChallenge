@@ -12,5 +12,6 @@
     <string name="title_activity_main">Main</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="title_activity_challenge_view">ChallengeViewActivity</string>
 
 </resources>
