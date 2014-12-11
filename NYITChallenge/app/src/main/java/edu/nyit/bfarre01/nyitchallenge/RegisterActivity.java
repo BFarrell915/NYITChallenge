@@ -1,9 +1,8 @@
 package edu.nyit.bfarre01.nyitchallenge;
 
-import android.app.ActionBar;
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,8 +14,6 @@ import com.parse.Parse;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-import java.text.ParseException;
-
 
 public class RegisterActivity extends Activity {
     protected EditText mUsername;
@@ -27,7 +24,7 @@ public class RegisterActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_registerr);
+        setContentView(R.layout.activity_register);
         Parse.initialize(this, "APPLICATION ID", "CLIENT KEY");
 
         //initialize
@@ -67,7 +64,7 @@ public class RegisterActivity extends Activity {
 
 
         public boolean onCreateOptionsMenu(Menu menu){
-            getMenuInflater().inflate(R.menu.menu_registerr, menu);
+            getMenuInflater().inflate(R.menu.menu_register, menu);
             return true;
         }
 
@@ -81,5 +78,10 @@ public class RegisterActivity extends Activity {
                 return true;
             }
             return super.onOptionsItemSelected(item);
+        }
+
+        public void startLogin(View view) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
         }
     }

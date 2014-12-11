@@ -1,28 +1,15 @@
 package edu.nyit.bfarre01.nyitchallenge;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AbsListView;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
-
-import edu.nyit.bfarre01.nyitchallenge.dummy.DummyContent;
-
-import static edu.nyit.bfarre01.nyitchallenge.R.id.listView;
-import static edu.nyit.bfarre01.nyitchallenge.R.layout.item_challenge_list;
 
 public class ChallengesFragment extends ListFragment {
     private List<ListViewItem> mItems;        // ListView items list
@@ -42,9 +29,9 @@ public class ChallengesFragment extends ListFragment {
         mItems = new ArrayList<ListViewItem>();
         Resources resources = getResources();
 
-        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_launcher), getString(R.string.challenge1), getString(R.string.description)));
-        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_launcher), getString(R.string.challenge2), getString(R.string.description)));
-        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_launcher), getString(R.string.challenge3), getString(R.string.description)));
+        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_shield), getString(R.string.challenge1), getString(R.string.description)));
+        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_shield), getString(R.string.challenge2), getString(R.string.description)));
+        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_shield), getString(R.string.challenge3), getString(R.string.description)));
 
         // initialize and set the list adapter
         setListAdapter(new ListViewAdapter(getActivity(), mItems));
@@ -64,5 +51,9 @@ public class ChallengesFragment extends ListFragment {
 
         // do something
         Toast.makeText(getActivity(), item.title, Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(getActivity(), ChallengeViewActivity.class);
+        intent.putExtra("title", item.title);
+        intent.putExtra("description", item.description);
+        startActivity(intent);
     }
 }

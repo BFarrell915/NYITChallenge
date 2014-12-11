@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">NYIT Challenge</string>
+    <string name="app_title">Challenge</string>
     <string name="get_started">Get Started</string>
     <string name="login">Login to your NYIT Account</string>
     <string name="action_settings">Settings</string>
@@ -18,6 +19,7 @@
     <string name="challenge1">Don’t be shy</string>
     <string name="description1">Take picture of yourself making a funny face.</string>
 
+<<<<<<< HEAD
     <string name="challenge2">Marathon Champ</string>
     <string name="description2">Run around the quad.</string>
 
@@ -39,4 +41,15 @@
 
 
     <string name="description">Meet the Boss</string>
+=======
+    <string name="description">Description</string>
+
+    <string name="friend1">Jeffrey Angrand</string>
+    <string name="friend2">Steven Aubry</string>
+    <string name="friend3">Bryan Farrell</string>
+
+    <string name="completed1">COMPLETED CHALLENGES: 5</string>
+    <string name="completed2">COMPLETED CHALLENGES: 10</string>
+    <string name="completed3">COMPLETED CHALLENGES: 7</string>
+>>>>>>> FETCH_HEAD
 </resources>
