@@ -15,9 +15,28 @@
     <string name="title_activity_challenge_view">ChallengeViewActivity</string>
     <string name="title_activity_registerr">RegisterrActivity</string>
 
-    <string name="challenge1">CHALLENGE 1</string>
-    <string name="challenge2">CHALLENGE 2</string>
-    <string name="challenge3">CHALLENGE 3</string>
+    <string name="challenge1">Don’t be shy</string>
+    <string name="description1">Take picture of yourself making a funny face.</string>
 
-    <string name="description">Description</string>
+    <string name="challenge2">Marathon Champ</string>
+    <string name="description2">Run around the quad.</string>
+
+    <string name="challenge3">Lunchtime</string>
+    <string name="description3">Have lunch with a undergrad.</string>
+
+    <string name="challenge4">Meet the Boss</string>
+    <string name="description4">Take picture with department chair.</string>
+
+    <string name="challenge5">Traveler</string>
+    <string name="description5">Visit each campus building.</string>
+
+    <string name="challenge6">Polyglot</string>
+    <string name="description6">Learn how to say “hi" in 3 new languages.</string>
+
+    <string name="challenge7">Friend wander</string>
+    <string name="description7">Say hi to everyone you see.</string>
+
+
+
+    <string name="description">Meet the Boss</string>
 </resources>
