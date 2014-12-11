@@ -15,4 +15,9 @@
     <string name="title_activity_challenge_view">ChallengeViewActivity</string>
     <string name="title_activity_registerr">RegisterrActivity</string>
 
+    <string name="challenge1">CHALLENGE 1</string>
+    <string name="challenge2">CHALLENGE 2</string>
+    <string name="challenge3">CHALLENGE 3</string>
+
+    <string name="description">Description</string>
 </resources>

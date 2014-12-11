@@ -3,4 +3,7 @@
     <color name="blue">#3366CC</color>
     <color name="white">#FFFFFF</color>
     <color name="gray">#F0F0F0</color>
+    <color name="frame">#b4b4b4</color>
+    <color name="frame_solid">#eee</color>
+    <color name="frame_background">#bcbcbc</color>
 </resources>
