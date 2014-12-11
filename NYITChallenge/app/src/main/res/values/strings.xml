@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">NYIT Challenge</string>
+    <string name="app_title">Challenge</string>
     <string name="get_started">Get Started</string>
     <string name="login">Login to your NYIT Account</string>
     <string name="action_settings">Settings</string>

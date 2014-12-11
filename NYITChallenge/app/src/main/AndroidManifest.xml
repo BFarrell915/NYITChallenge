@@ -15,7 +15,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
+        android:label="@string/app_title"
         android:theme="@style/AppTheme" >
         <meta-data
             android:name="com.google.android.gms.version"
@@ -23,7 +23,7 @@
 
         <activity
             android:name="edu.nyit.bfarre01.nyitchallenge.StartActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_title" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -32,7 +32,7 @@
         </activity>
         <activity
             android:name="edu.nyit.bfarre01.nyitchallenge.LoginActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_title" >
         </activity>
         <activity
             android:name="edu.nyit.bfarre01.nyitchallenge.FriendsActivity"
@@ -46,7 +46,7 @@
         </activity>
         <activity
             android:name="edu.nyit.bfarre01.nyitchallenge.MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_title" >
         </activity>
         <activity
             android:name="edu.nyit.bfarre01.nyitchallenge.SettingsActivity"
@@ -55,12 +55,12 @@
         </activity>
         <activity
             android:name="edu.nyit.bfarre01.nyitchallenge.ChallengeViewActivity"
-            android:label="@string/title_activity_challenge_view"
+            android:label="@string/app_title"
             android:parentActivityName="edu.nyit.bfarre01.nyitchallenge.MainActivity" >
         </activity>
         <activity
             android:name="edu.nyit.bfarre01.nyitchallenge.RegisterActivity"
-            android:label="@string/title_activity_registerr" >
+            android:label="@string/app_title" >
         </activity>
     </application>
 

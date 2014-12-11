@@ -1,10 +1,12 @@
 package edu.nyit.bfarre01.nyitchallenge;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 import edu.nyit.bfarre01.nyitchallenge.R;
 
@@ -16,6 +18,15 @@ public class ChallengeViewActivity extends Activity {
         setContentView(R.layout.activity_challenge_view);
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
+
+        Intent intent = getIntent();
+        String title = intent.getStringExtra("title");
+        String description = intent.getStringExtra("description");
+
+        TextView challenge_title = (TextView)findViewById(R.id.challenge_title);
+        TextView challenge_description = (TextView)findViewById(R.id.challenge_description);
+        challenge_title.setText(title);
+        challenge_description.setText(description);
     }
 
 

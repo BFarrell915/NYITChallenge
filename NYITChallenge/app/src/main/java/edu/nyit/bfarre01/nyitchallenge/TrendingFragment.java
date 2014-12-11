@@ -28,9 +28,9 @@ public class TrendingFragment extends ListFragment {
         mItems = new ArrayList<ListViewItem>();
         Resources resources = getResources();
 
-        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_launcher), getString(R.string.challenge1), getString(R.string.description)));
-        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_launcher), getString(R.string.challenge2), getString(R.string.description)));
-        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_launcher), getString(R.string.challenge3), getString(R.string.description)));
+        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_img_default), getString(R.string.challenge1), getString(R.string.description)));
+        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_vid_default), getString(R.string.challenge2), getString(R.string.description)));
+        mItems.add(new ListViewItem(resources.getDrawable(R.drawable.ic_vid_default), getString(R.string.challenge3), getString(R.string.description)));
 
         // initialize and set the list adapter
         setListAdapter(new ListViewAdapter(getActivity(), mItems));
