@@ -92,10 +92,11 @@
             android:layout_height="wrap_content"
             android:onClick="startLogin"
             android:layout_gravity="center_horizontal" />
+
         <Button
             android:text="Sign Up"
             android:textColor="@color/blue"
-            android:layout_width="162dp"
+            android:layout_width="145dp"
             android:layout_height="wrap_content"
             android:onClick="startSignup"
             android:layout_gravity="center_horizontal" />

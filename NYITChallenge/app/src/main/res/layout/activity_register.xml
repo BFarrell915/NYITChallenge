@@ -53,6 +53,7 @@
         android:id="@+id/registerButton"
         android:layout_below="@+id/passwordRegisterEditText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="74dp" />
+        android:layout_marginTop="74dp"
+        android:onClick="startLogin"/>
 
 </RelativeLayout>

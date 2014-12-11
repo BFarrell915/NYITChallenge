@@ -20,4 +20,12 @@
     <string name="challenge3">CHALLENGE 3</string>
 
     <string name="description">Description</string>
+
+    <string name="friend1">Jeffrey Angrand</string>
+    <string name="friend2">Steven Aubry</string>
+    <string name="friend3">Bryan Farrell</string>
+
+    <string name="completed1">COMPLETED CHALLENGES: 5</string>
+    <string name="completed2">COMPLETED CHALLENGES: 10</string>
+    <string name="completed3">COMPLETED CHALLENGES: 7</string>
 </resources>

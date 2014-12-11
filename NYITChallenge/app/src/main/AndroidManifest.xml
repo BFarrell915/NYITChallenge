@@ -59,7 +59,7 @@
             android:parentActivityName="edu.nyit.bfarre01.nyitchallenge.MainActivity" >
         </activity>
         <activity
-            android:name="edu.nyit.bfarre01.nyitchallenge.RegisterrActivity"
+            android:name="edu.nyit.bfarre01.nyitchallenge.RegisterActivity"
             android:label="@string/title_activity_registerr" >
         </activity>
     </application>
